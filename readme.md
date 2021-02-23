@@ -21,5 +21,11 @@ Options:
 run under command at a git project base path.
 
 ```
-npx auto-weekly -u caoxi caoxm -ucn 张三 -p . -d ./weekly
+npx auto-weekly
+```
+
+or just
+
+```
+npx auto-weekly -u zhangsan zhangs -ucn 张三 -p . -d ./weekly
 ```
