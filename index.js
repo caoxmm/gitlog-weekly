@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const Excel = require('exceljs');
 const { getWeekStartEndDateString, parseDateToMd } = require('./src/date');
 const { Command } = require('commander');
