@@ -116,7 +116,7 @@ async function checkInput(username, users, path, dist) {
 async function generateXlsx(username, result, dist) {
   const templatePath = `.${sysPath.sep}template${sysPath.sep}weekly.xlsx`;
   const workbook = new Excel.Workbook();
-  await workbook.xlsx.readFile(templatePath);
+  await workbook.xlsx.readFile(sysPath.resolve(__dirname, templatePath));
   var worksheet = workbook.getWorksheet(1);
   var row2 = worksheet.getRow(2);
   row2.getCell(1).value = `填报人：${username}`;
