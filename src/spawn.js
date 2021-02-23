@@ -6,7 +6,6 @@ const spawn = async (...args) => {
     proc.stdout.on('data', function (data) {
       std += data.toString();
     });
-    proc.stdout.pipe(process.stdout);
     proc.stderr.pipe(process.stderr);
     proc.on('close', () => {
       resolve(std);

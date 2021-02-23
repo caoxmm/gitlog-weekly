@@ -31,4 +31,16 @@ function parseDate(dateString) {
   return new Date(dateString);
 }
 
-module.exports = { getWeekStartEndDateString, formatDate, parseDate };
+function parseDateToMd(dateString) {
+  const date = new Date(dateString);
+  const myMonth = date.getMonth() + 1;
+  const myDay = date.getDate();
+  return `${myMonth}.${myDay}`;
+}
+
+module.exports = {
+  getWeekStartEndDateString,
+  formatDate,
+  parseDate,
+  parseDateToMd,
+};
