@@ -1,6 +1,7 @@
 const { getWeekStartEndDateString } = require('./src/date');
 const { Command } = require('commander');
 const { spawn } = require('./src/spawn');
+const { filterResolveLogsToRecords } = require('./src/resolveGitLog');
 const chalk = require('chalk');
 const program = new Command();
 program.version('0.0.1');
@@ -30,5 +31,23 @@ console.log('checking git log ...🚀');
 console.log(chalk.yellow(`between (${from},${to}), user [${users.join(',')}]`));
 
 (async function () {
-  await spawn('git', ['log'], { cwd: path });
+  // read git log
+  const logs = await spawn(
+    'git',
+    [
+      'log',
+      '--pretty=[[%an|%ad|%s]]',
+      '--date=iso-local',
+      `--since=${from}`,
+      `--until=${to}`,
+      '--no-merges',
+    ],
+    { cwd: path }
+  );
+  // filter data
+  const records = filterResolveLogsToRecords(logs, users);
+  console.log(records);
+  // get template
+  // add to template
+  // generate file
 })();
