@@ -1,13 +1,17 @@
 {
-  "name": "git-weekly",
+  "name": "auto-weekly",
   "version": "1.0.0",
-  "description": "",
+  "description": "auto generate weekly by git commit log.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caoxmm/gitlog-weekly"
+  },
   "keywords": [],
-  "author": "",
+  "author": "caoxm",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.0",

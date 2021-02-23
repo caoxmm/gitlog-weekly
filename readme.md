@@ -1,9 +1,9 @@
-### 周报生成脚本
+### auto generate weekly script
 
-1.使用方式
+1.usage
 
 ```
-npx weekly [options]
+npx auto-weekly [options]
 
 Options:
   -V, --version                output the version number
@@ -18,6 +18,8 @@ Options:
 
 2.example
 
+run under command at a git project base path.
+
 ```
-npx weekly -u caoxi caoxm -ucn 曹西梦 -p . -d ./weekly
+npx auto-weekly -u caoxi caoxm -ucn 张三 -p . -d ./weekly
 ```
