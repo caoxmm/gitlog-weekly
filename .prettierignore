@@ -1,0 +1,4 @@
+# Ignore artifacts:
+dist
+template
+node_modules
