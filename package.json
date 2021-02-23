@@ -1,6 +1,6 @@
 {
   "name": "auto-weekly",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "auto generate weekly by git commit log.",
   "main": "index.js",
   "scripts": {
