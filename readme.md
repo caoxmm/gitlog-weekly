@@ -1,4 +1,4 @@
-### auto generate weekly script
+### auto generate weekly xlsx by git logs
 
 1.usage
 

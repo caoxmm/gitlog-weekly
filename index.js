@@ -83,6 +83,13 @@ async function checkInput(username, users, path, dist) {
       type: 'input',
       name: 'username',
       message: 'reporter chinese name?',
+      validate(value) {
+        if (!value) {
+          console.log(chalk.red('please input reporter chinese name'));
+          process.exit();
+        }
+        return true;
+      },
     });
     username = response.username;
   }
@@ -91,6 +98,13 @@ async function checkInput(username, users, path, dist) {
       type: 'input',
       name: 'path',
       message: 'where is our git repository path? (in filesystem)',
+      validate(value) {
+        if (!value) {
+          console.log(chalk.red('please input local path'));
+          process.exit();
+        }
+        return true;
+      },
     });
     path = response.path;
   }
@@ -99,6 +113,13 @@ async function checkInput(username, users, path, dist) {
       type: 'input',
       name: 'users',
       message: 'reporter git commit usernames? (use space to split)',
+      validate(value) {
+        if (!value) {
+          console.log(chalk.red('please input reporter commit username'));
+          process.exit();
+        }
+        return true;
+      },
     });
     users = response.users.split(' ');
   }
@@ -107,6 +128,13 @@ async function checkInput(username, users, path, dist) {
       type: 'input',
       name: 'dist',
       message: 'where to put our generated xlsx?',
+      validate(value) {
+        if (!value) {
+          console.log(chalk.red('please xlsx dist path'));
+          process.exit();
+        }
+        return true;
+      },
     });
     dist = response.dist;
   }
